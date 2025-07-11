@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inserir Artigo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            margin: auto;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="file"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #4CAF50;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="grava_artigos.php" method="POST" enctype="multipart/form-data">
+        Código de artigo: <input type="text" name="tcodartigo" maxlength="10" required>
+        <br><br>
+        Descrição: <input type="text" name="tdescricao" maxlength="50" required>
+        <br><br>
+        Preço de Venda (€): <input type="number" name="tpvp" step="0.01" min="0" required>
+        <br><br>
+        Quant. Stock: <input type="number" name="tqstock" min="0" required>
+        <br><br>
+        Imagem: <input type="file" name="timagem" accept="image/*">
+        <br><br>
+        <input type="submit" value="Gravar Artigo">
+        <br><br>
+        <a href="index.html">Voltar</a>
+    </form>
+</body>
+
+</html>

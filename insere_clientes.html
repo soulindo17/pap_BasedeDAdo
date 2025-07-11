@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inserir Cliente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            margin: auto;
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #4CAF50;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Inserir Cliente</h1>
+    <form action="grava_clientes.php" method="POST">
+        Nome:
+        <input type="text" name="tnome" maxlength="50" required>
+
+        Morada:
+        <input type="text" name="tmorada" maxlength="50" required>
+
+        Nº Fiscal:
+        <input type="text" name="tnumfiscal" maxlength="10" pattern="\d{9,10}" required>
+
+        Total de Compras (€):
+        <input type="number" name="ttotalcompras" min="0" required>
+
+        Código Postal:
+        <input type="text" name="tcodpostal" maxlength="8" required>
+
+        Localidade:
+        <input type="text" name="tlocalidade" maxlength="40" required>
+
+        Contacto:
+        <input type="text" name="tcontacto" maxlength="10" required>
+
+        E-mail:
+        <input type="email" name="temail" maxlength="50" required>
+
+        Senha:
+        <input type="password" name="tsenha" maxlength="250" required>
+
+        <input type="submit" value="Gravar Cliente">
+        <br><br>
+        <a href="index.html">Voltar</a>
+    </form>
+</body>
+
+</html>
+
